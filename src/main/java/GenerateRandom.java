@@ -4,7 +4,7 @@ import java.util.Random;
 public class GenerateRandom {
     static ArrayList<Integer> numbers = new ArrayList<>();
     public static ArrayList<Integer> random(){
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 3; i++){
             int random = (int)Math.floor(Math.random() * 9 + 1);
             numbers.add(random);
         }
@@ -13,7 +13,7 @@ public class GenerateRandom {
 
     public static void printNumbers(ArrayList<Integer> numbers){
         for(int i = 0; i < numbers.size(); i++){
-            System.out.println(numbers.get(i));
+            System.out.print(numbers.get(i) + " ");
         }
     }
 }
