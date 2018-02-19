@@ -1,19 +1,27 @@
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class GenerateRandom {
-    static ArrayList<Integer> numbers = new ArrayList<>();
-    public static ArrayList<Integer> random(){
-        for(int i = 0; i < 3; i++){
-            int random = (int)Math.floor(Math.random() * 9 + 1);
-            numbers.add(random);
-        }
+    static ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+    static ArrayList<Integer> resultNumbers = new ArrayList<>();
+
+    public static ArrayList<Integer> shuffle(ArrayList<Integer> numbers){
+        Collections.shuffle(numbers);
         return numbers;
     }
 
-    public static void printNumbers(ArrayList<Integer> numbers){
-        for(int i = 0; i < numbers.size(); i++){
-            System.out.print(numbers.get(i) + " ");
+    public static ArrayList<Integer> resultNumber(ArrayList<Integer> arr){
+        for(int i = 0 ; i < 3; i++){
+            resultNumbers.add(arr.get(i));
+        }
+        return resultNumbers;
+    }
+
+    public static void printResultNumbers(ArrayList<Integer> resultNumbers){
+        for(int i = 0; i < resultNumbers.size(); i++){
+            System.out.print(resultNumbers.get(i) + " ");
         }
     }
 }
