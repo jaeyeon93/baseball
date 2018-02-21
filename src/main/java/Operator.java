@@ -12,12 +12,6 @@ public class Operator {
         return splitInt;
     }
 
-    public void printSplitInt(ArrayList<Integer> arr){
-        for(int i = 0; i < arr.size(); i++){
-            System.out.print(arr.get(i) + " ");
-        }
-    }
-
     public Integer findStrike(ArrayList<Integer> arrInt, ArrayList<Integer> arrRnd){
         int countStrike = 0;
         for(int i = 0; i < arrInt.size(); i++){

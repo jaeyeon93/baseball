@@ -4,7 +4,6 @@ import java.util.Collections;
 
 public class GenerateRandom {
     static ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
-
     static ArrayList<Integer> resultNumbers = new ArrayList<>();
 
     public static ArrayList<Integer> shuffle(ArrayList<Integer> numbers){
@@ -19,18 +18,11 @@ public class GenerateRandom {
         return resultNumbers;
     }
 
-    public static void printResultNumbers(ArrayList<Integer> resultNumbers){
-        for(int i = 0; i < resultNumbers.size(); i++){
-            System.out.print(resultNumbers.get(i) + " ");
-        }
-    }
-
     public static Integer result(ArrayList<Integer> resultNumbers){
         String result = "";
         for(int i = 0; i < resultNumbers.size(); i++){
             result += resultNumbers.get(i);
         }
-        System.out.println(result);
         return Integer.parseInt(result);
     }
 }
