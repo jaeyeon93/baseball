@@ -6,7 +6,6 @@ public class Run {
     public static void main(String [] args){
         // make instance
         Input input = new Input();
-        Operator operator = new Operator();
 
         // generate random number
         ArrayList<Integer> shuffle =  GenerateRandom.shuffle(GenerateRandom.numbers);
@@ -20,23 +19,21 @@ public class Run {
             System.out.println("입력한 수 : " + inputNumber);
 
             // operating area
+            Operator operator = new Operator();
             ArrayList<Integer> inputSplit = operator.splitInt(inputNumber);
-            operator.printSplitInt(inputSplit);
-
-            System.out.println();
 
             // result area
             int countNumber =operator.findStrike(inputSplit , shuffle);
             operator.resultStrike(countNumber);
-
             int countBall = operator.findBall(inputSplit, shuffle);
             operator.resultBall(countBall);
-
-            int countStrike = operator.findStrike(inputSplit, resultNumbers);
+            operator.printNothing(countBall, countNumber);
 
             // finish
-            if(inputNumber == result)
+            if(inputNumber == result){
+                System.out.println("숫자야구 게임 끝");
                 break;
+            }
         }
 
     }

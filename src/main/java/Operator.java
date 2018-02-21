@@ -40,17 +40,14 @@ public class Operator {
         if (countStrike == 1){
             System.out.println("1스트라이크");
         }
-
-        if (countStrike == 0){
-            System.out.println("nothing");
-        }
     }
 
     public Integer findBall(ArrayList<Integer> arrInt, ArrayList<Integer> arrRnd) {
         int countBall = 0;
         for(int i = 0; i < arrInt.size(); i++){
             if(arrInt.contains(arrRnd.get(i))){
-                countBall++;
+                if(arrInt.get(i) != arrRnd.get(i))
+                    countBall++;
             }
         }
         return countBall;
@@ -68,6 +65,11 @@ public class Operator {
         if (countBall == 1){
             System.out.println("1Ball");
         }
+    }
+
+    public void printNothing(int countBall, int countStrike){
+        if (countBall == 0 && countStrike == 0)
+            System.out.println("Nothing");
     }
 
 }
