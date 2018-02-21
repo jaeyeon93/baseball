@@ -24,4 +24,13 @@ public class GenerateRandom {
             System.out.print(resultNumbers.get(i) + " ");
         }
     }
+
+    public static Integer result(ArrayList<Integer> resultNumbers){
+        String result = "";
+        for(int i = 0; i < resultNumbers.size(); i++){
+            result += resultNumbers.get(i);
+        }
+        System.out.println(result);
+        return Integer.parseInt(result);
+    }
 }
